@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { PropType } from 'vue';
     defineProps<{ icon: string, text: string }>();
 </script>
 
