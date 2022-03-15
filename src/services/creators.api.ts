@@ -4,6 +4,13 @@ const axiosClient = axios.create({
     baseURL: 'http://localhost:8000/api/creator',
 });
 
+export interface Creator {
+    id: number;
+    name: string;
+    info: string;
+    type: string;
+}
+
 export async function getCreators() {
     try {
         const { data } = await axiosClient.get('/');
