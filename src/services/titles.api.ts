@@ -25,9 +25,9 @@ export async function getTitle(id:number){
     }
 }
 
-export async function getTitles() {
+export async function getTitles(): Promise<Title[]> {
     try {
-        const { data } = await axiosClient.get('/');
+        const { data } = await axiosClient.get<Title>('/');
         return [null, data];
     } catch (error) {
         return [error];
